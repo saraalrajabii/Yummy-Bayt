@@ -15,5 +15,5 @@ app.get("/", function (req, res) {
 });
 
 app.listen(3005, () => {
-  console.log("server listning in port 3000");
+  console.log("server listening in port 3000");
 });
