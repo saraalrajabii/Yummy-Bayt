@@ -7,5 +7,4 @@ router.post("/addToCart", controller.addToCart);
 
 router.post("/checkout", controller.checkout);
 
-
 module.exports.router = router;
