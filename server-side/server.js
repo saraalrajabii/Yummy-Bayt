@@ -20,6 +20,7 @@ app.get("/", function (req, res) {
   res.send("Home Page");
 });
 
-app.listen(3005, () => {
-  console.log("server listning in port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}. http://localhost:3000/`);
 });

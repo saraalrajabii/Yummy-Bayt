@@ -13,10 +13,19 @@ module.exports = {
 
   // add to cart
   addToCart: (params, callback) => {
-    var queryStr = "Insert into cart (productID, quantity,orderID) values (?,?,?)";
+    var queryStr = "Insert into cart (productID, quantity, orderID) values (?,?,?)";
     connection.query(queryStr, params, function (err, result) {
       callback(err, result);
       console.log("errror", err);
+    });
+  },
+
+  //checkout
+  checkout: (params, callback) => {
+    var queryStr = "Insert into orders (userID, totalAmount, payment, delivery, deliveryTime, orderNumber, orderDate, address, Notes, status, phoneNumber) values (?,?,?,?,?,?,?,?,?,?,?)";
+    connection.query(queryStr, params, function (err, result) {
+      callback(err, result);
+      console.log("error", err);
     });
   },
 };
