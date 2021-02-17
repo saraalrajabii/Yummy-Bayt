@@ -1,3 +1,4 @@
+import 'package:client/screens/Home/carousel.dart';
 import 'package:client/widgets/appBar.dart';
 import 'package:client/widgets/bottomNav.dart';
 import 'package:client/widgets/sidebar.dart';
@@ -38,14 +39,30 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: IAppBar(),
+
       // appBar: AppBar(),
       drawer: Sidenav(navIndex, (int index) {
         setState(() {
           navIndex = index;
         });
       }),
-      body: Center(child: tabs[0]),
       backgroundColor: Colors.white,
+
+      body:
+          // ImageCarousel(),
+          Container(
+              child: new Stack(
+        children: <Widget>[
+          ImageCarousel(),
+          // Text("home",
+          //     style: TextStyle(
+          //         fontWeight: FontWeight.bold, color: Colors.yellow[800])),
+
+          // backgroundColor: Colors.white,
+        ],
+      )),
+
+      // backgroundColor: Colors.white,
       bottomNavigationBar: BottomNav(
         ind: 0,
       ),

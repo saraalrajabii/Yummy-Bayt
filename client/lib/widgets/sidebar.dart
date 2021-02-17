@@ -18,14 +18,15 @@ class Sidenav extends StatelessWidget {
                     child: Column(children: <Widget>[
                   Image(
                     image: AssetImage('assets/PatDrawer.png'),
-                    height: 100,
+                    height: 70,
                     width: 200,
                   ),
-                  Text('Yummy Bayt',
+                  Text('YUMMY BAYT',
                       style: TextStyle(
                           color: Colors.yellow[800],
-                          fontSize: 21,
-                          fontFamily: 'BungeeInline'),
+                          fontSize: 25,
+                          letterSpacing: 4,
+                          fontFamily: 'Lalezar'),
                       textAlign: TextAlign.center),
                 ])),
                 decoration: BoxDecoration(color: Colors.white),
@@ -65,7 +66,7 @@ class Sidenav extends StatelessWidget {
           trailing: suffix,
           title: Text(text,
               style: TextStyle(
-                  fontSize: 15, color: selected ? Colors.white : Colors.black)),
+                  fontSize: 18, color: selected ? Colors.white : Colors.black)),
           selected: selected,
           onTap: onTap,
         ),
