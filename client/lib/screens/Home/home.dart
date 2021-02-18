@@ -4,6 +4,8 @@ import 'package:client/widgets/bottomNav.dart';
 import 'package:client/widgets/sidebar.dart';
 import 'package:flutter/material.dart';
 
+//--- Home Page Widget ---//
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -14,55 +16,23 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int navIndex = 0;
   final tabs = [
-    Center(
-        child: Column(children: <Widget>[
-      Text("home",
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.yellow[800])),
-      Image(
-        image: AssetImage('assets/home.jpg'),
-        height: 535,
-      )
-      // Image.network(
-      //     "https://www.theflavorbender.com/wp-content/uploads/2018/01/Sri-Lankan-Fish-Patties-The-Flavor-Bender-2-11-700x1049.jpg",
-      //     height: 500,
-      //     fit: BoxFit.cover)
-      ,
-    ])),
-
-// The cart widget should be added to this array
-
-//The menu widget should be added to this array
+/*--- in case we want to use the same screen to display 
+different widgets in the body :
+   * The cart widget should be added to this array 
+   * The menu widget should be added to this array  */
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: IAppBar(),
-
-      // appBar: AppBar(),
       drawer: Sidenav(navIndex, (int index) {
         setState(() {
           navIndex = index;
         });
       }),
       backgroundColor: Colors.white,
-
-      body:
-          // ImageCarousel(),
-          Container(
-              child: new Stack(
-        children: <Widget>[
-          ImageCarousel(),
-          // Text("home",
-          //     style: TextStyle(
-          //         fontWeight: FontWeight.bold, color: Colors.yellow[800])),
-
-          // backgroundColor: Colors.white,
-        ],
-      )),
-
-      // backgroundColor: Colors.white,
+      body: ImageCarousel(),
       bottomNavigationBar: BottomNav(
         ind: 0,
       ),

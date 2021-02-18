@@ -40,6 +40,20 @@ module.exports = {
       res.json(results);
      });
    },
+
+
+
+// delete 
+deleteProduct: (req, res) => {
+  var product = req.params.id; 
+  console.log(product+ "hhhh")
+  model.deleteProduct(product, function (err, results) {
+    if (err) {
+      console.log("error in delete in  controller", err);
+    }
+    console.log("success in delete in  controller");
+    res.json(results);
+   });
+},
+
 };
-
-
