@@ -26,6 +26,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^0.1.2
   english_words: ^3.1.0
+  carousel_pro: ^0.0.1
+  http: ^0.12.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -50,6 +52,16 @@ flutter:
   assets:
     - assets/home.jpg
     - assets/PatDrawer.png
+    - assets/pattie0.jpg
+    - assets/pattie1.jpg
+    - assets/pattie2.jpg
+    - assets/pattie3.png
+    - assets/test.png 
+    - assets/test2.png
+    - assets/test3.png
+    - assets/test5.png
+    - assets/test4.jpg
+    - assets/pattie4.jpg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -64,20 +76,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: BungeeInline
-      fonts:
-        - asset: fonts/BungeeInline.ttf
-      
 
-    - family: Shrikhand
+    - family: Lalezar
       fonts:
-        - asset: fonts/Shrikhand-Regular.ttf
-
-         
-
-    - family: GreatVibes
-      fonts:
-        - asset: fonts/GreatVibes-Regular.ttf
+        - asset: fonts/Lalezar-Regular.ttf
+        
           
   #
   # For details regarding fonts from package dependencies,

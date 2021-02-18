@@ -14,7 +14,7 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  int indexx;
+  int index;
   // int ind;
   @override
   Widget build(BuildContext context) {
