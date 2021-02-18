@@ -11,8 +11,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(
-            builder: (_) => MyHomePage(title: "Yummy Bayt"));
+        return MaterialPageRoute(builder: (_) => MyHomePage());
 
       // case '/profile':
       //     return MaterialPageRoute(
@@ -42,17 +41,18 @@ class RouteGenerator {
       //     );
 
       default:
-        // If there is no such named route in the switch statement, e.g. /third
+        // If there is no such named route in the switch statement
         return _errorRoute();
     }
   }
 
+// this widget will be call when ever the user navigates to a route that does not exist
   static Route<dynamic> _errorRoute() {
     return MaterialPageRoute(builder: (_) {
       return Scaffold(
         appBar: IAppBar(),
         body: Center(
-          child: Text('ERROR'),
+          child: Text('ERROR THIS PAGE DOES NOT EXIST, LET"S GO BACK HOME'),
         ),
         bottomNavigationBar: BottomNav(ind: 2),
       );
