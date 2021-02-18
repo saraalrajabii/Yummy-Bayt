@@ -28,4 +28,15 @@ module.exports = {
       console.log("error", err);
     });
   },
-};
+
+
+// delete product 
+deleteProduct: (product, callback) => {
+  console.log(product+"model"); 
+  var queryStr = `delete from cart where productID ='${product}' `;
+  connection.query(queryStr, product, function (err, result) {
+    callback(err, result);
+    console.log("error", err);
+  });
+}
+}
