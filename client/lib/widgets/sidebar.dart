@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// -- This widget allows us to have a  reusable  Drawer/ sidebar across different screens  --//
+
 class Sidenav extends StatelessWidget {
   final Function setIndex;
   final int selectedIndex;
