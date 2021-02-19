@@ -2,16 +2,24 @@ import 'package:client/screens/Home/home.dart';
 import 'package:client/widgets/appBar.dart';
 import 'package:client/widgets/bottomNav.dart';
 import 'package:flutter/material.dart';
-import 'package:client/main.dart';
+// import 'package:client/main.dart';
+import 'package:client/screens/Menu/menu.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // Getting arguments passed in while calling Navigator.pushNamed
-    final args = settings.arguments;
+    // final args = settings.arguments;
 
     switch (settings.name) {
       case '/':
+<<<<<<< HEAD
+        return MaterialPageRoute(
+            builder: (_) => MyHomePage(title: "Yummy Bayt"));
+      case '/menu':
+        return MaterialPageRoute(builder: (_) => Menu());
+=======
         return MaterialPageRoute(builder: (_) => MyHomePage());
+>>>>>>> 33963e598bf27257369e3f5253f2909f30a4fb7f
 
       // case '/profile':
       //     return MaterialPageRoute(
