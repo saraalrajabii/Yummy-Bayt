@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+//--  This widget allow us to have a reusable bottom navbar across different screens  --//
+
 class BottomNav extends StatefulWidget {
   final int ind;
 
@@ -43,25 +45,23 @@ class _BottomNavState extends State<BottomNav> {
       animationDuration: Duration(milliseconds: 350),
       index: widget.ind,
       onTap: (index) {
+//-- here we'r specifying the route of the screen depending on the choice of the user  --//
         if (index == 0) {
-          Navigator.of(context).pushNamed(
-            '/',
-          );
+          //Home Screen
+
+          Navigator.of(context).pushNamed('/');
         }
         if (index == 1) {
-          Navigator.of(context).pushNamed(
-            '/menu',
-            arguments: 'anything you want to pass',
-          );
+          //Menu Screen
+
+          Navigator.of(context)
+              .pushNamed('/menu', arguments: 'anything you want to pass');
         }
         if (index == 2) {
-          Navigator.of(context).pushNamed(
-            '/cart',
-            arguments: 'anything you want to pass',
-          );
+          //cart Screen
+          Navigator.of(context)
+              .pushNamed('/cart', arguments: 'anything you want to pass');
         }
-
-        debugPrint("current $widget.ind");
       },
     );
   }
