@@ -23,11 +23,11 @@ class _MyHomePageState extends State<MyHomePage> {
         image: AssetImage('assets/home.jpg'),
         height: 535,
       )
-      // Image.network(
-      //     "https://www.theflavorbender.com/wp-content/uploads/2018/01/Sri-Lankan-Fish-Patties-The-Flavor-Bender-2-11-700x1049.jpg",
-      //     height: 500,
-      //     fit: BoxFit.cover)
-      ,
+      //   // Image.network(
+      //   //     "https://www.theflavorbender.com/wp-content/uploads/2018/01/Sri-Lankan-Fish-Patties-The-Flavor-Bender-2-11-700x1049.jpg",
+      //   //     height: 500,
+      //   //     fit: BoxFit.cover)
+      //   ,
     ])),
 
 // The cart widget should be added to this array
@@ -48,19 +48,20 @@ class _MyHomePageState extends State<MyHomePage> {
       }),
       backgroundColor: Colors.white,
 
-      body:
-          // ImageCarousel(),
-          Container(
-              child: new Stack(
-        children: <Widget>[
-          ImageCarousel(),
-          // Text("home",
-          //     style: TextStyle(
-          //         fontWeight: FontWeight.bold, color: Colors.yellow[800])),
+      body: Container(
+        child: new Stack(
+          children: <Widget>[
+            ImageCarousel(),
 
-          // backgroundColor: Colors.white,
-        ],
-      )),
+            // FloatingActionButton(
+            //   onPressed: () {},
+            //   child: Text("click"),
+            // )
+
+            // backgroundColor: Colors.white,
+          ],
+        ),
+      ),
 
       // backgroundColor: Colors.white,
       bottomNavigationBar: BottomNav(

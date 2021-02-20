@@ -3,24 +3,24 @@ import 'package:client/widgets/appBar.dart';
 import 'package:client/widgets/bottomNav.dart';
 import 'package:flutter/material.dart';
 import 'package:client/main.dart';
+import 'package:client/screens/Cart/cart.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // Getting arguments passed in while calling Navigator.pushNamed
-    final args = settings.arguments;
+    final arguments = settings.arguments;
 
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
             builder: (_) => MyHomePage(title: "Yummy Bayt"));
 
-      // case '/profile':
-      //     return MaterialPageRoute(
-      //
-      //       builder: (_) => profile(
-      //             data: args,
-      //           ),
-      //     );
+      case '/cart':
+        return MaterialPageRoute(
+          builder: (_) => Cart(
+              // data: arguments,
+              ),
+        );
 
       //---------------------------------------
 

@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use("/", router.router);
 app.use("/product", router.router);
-
+app.use("/checkout", router.router);
 app.get("/", function (req, res) {
   res.send("Home Page");
 });
